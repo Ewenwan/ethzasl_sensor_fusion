@@ -11,19 +11,14 @@ time delay compensated single and multi sensor fusion framework based on an EKF
 
     变量：
     p for pwi: 在世界坐标下的 IMU位置 IMU position in the world frame
-
     v for vwi: 在世界坐标下的 IMU速度 IMU velocity in the world frame
+    q for qwi: 在世界坐标下的 IMU姿态 IMU attitude in the world frame
 
-    q for qwi: the imu attitude in the world frame
+    b_w for bw: 陀螺仪漂移 the gyro biases
+    b_a for ba: 陀螺仪漂移 the accelerometer biases
 
-    b_w for bw: the gyro biases
+    L for λ:    视觉尺度因子 the visual scale factor with pmetric*λ = psensor
 
-    b_a for ba: the accelerometer biases
-
-    L for λ: the visual scale factor with pmetric*λ = psensor
-
-    q_wv for q,,vw: the attitude between the update-sensor reference frame and the world reference frame
-
-    q_ci for qic: the attitude between IMU and the update-sensor
-
-    p_ci for pic: the distance between IMU and the update-sensor 
+    q_wv for q,,vw: 更新阶段参考帧(相机参考帧) 和 世界参考帧 之间的姿态变化
+    q_ci for qic:   IMU and the update-sensor(相机) 姿态变化
+    p_ci for pic:   IMU and the update-sensor(相机) 位置变换
